@@ -27,14 +27,22 @@ function pass() {
   txtout.textContent = "YOU'RE WELCOME";
 }
 
-function miss() {
+function errorHandler(error) {
   txtout.style.color = "red";
-  txtout.textContent = "ERROR: INPUT AT LEAST 3 CHARS";
+  txtout.textContent = `${error}`;
 }
 
 sub.addEventListener("click", () => {
   let counter = txtinp.value.length;
   txtout.style.fontWeight = "600";
-  counter > 2 ? pass() : miss();
+  try {
+    if (counter > 2) {
+      pass();
+    } else {
+      throw new Error("INPUT SHOULD BE >= 3");
+    }
+  } catch (error) {
+    errorHandler(error);
+  }
   txtinp.value = "";
 });
