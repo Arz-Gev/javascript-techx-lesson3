@@ -1,12 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="overflow: hidden">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      input:focus {
+        outline: none;
+      }
+    </style>
   </head>
 
-  <body>
+  <body
+    style="
+      transform: scale(2.3);
+      transform-origin: top;
+      font-family: 'Segoe UI', sans-serif;
+    "
+  >
     <div
       style="
         display: flex;
@@ -15,8 +26,7 @@
         align-items: center;
         background-color: blue;
         border-radius: 7px;
-        max-width: 600px;
-        min-width: 100%;
+        width: 600px;
         height: 110px;
         margin: auto;
       "
@@ -78,13 +88,17 @@
       </div>
 
       <div style="display: flex; align-items: center; justify-content: center">
-        <input type="text" id="input" />
+        <input
+          type="text"
+          id="input"
+          placeholder="please enter at least 3 chars"
+        />
         <button
           id="subButton"
           type="button"
           style="
             width: 30px;
-            height: 21px;
+            height: 19px;
             margin: 0 0;
             color: blue;
             font-size: 9px;

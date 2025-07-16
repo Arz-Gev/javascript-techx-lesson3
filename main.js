@@ -22,14 +22,19 @@ res.addEventListener("click", () => {
   disp.textContent = reset();
 });
 
+function pass() {
+  txtout.style.color = "white";
+  txtout.textContent = "YOU'RE WELCOME";
+}
+
+function miss() {
+  txtout.style.color = "red";
+  txtout.textContent = "ERROR: INPUT AT LEAST 3 CHARS";
+}
+
 sub.addEventListener("click", () => {
   let counter = txtinp.value.length;
-  if (counter > 2) {
-    txtout.style.color = "black";
-    txtout.textContent = "Welcome";
-    txtinp.value = "";
-  } else {
-    txtout.textContent = "Erorr: input should be at least 3 chars";
-    txtout.style.color = "red";
-  }
+  txtout.style.fontWeight = "600";
+  counter > 2 ? pass() : miss();
+  txtinp.value = "";
 });
