@@ -23,8 +23,8 @@ res.addEventListener("click", () => {
 });
 
 function pass() {
-  txtout.style.color = "white";
-  txtout.textContent = "YOU'RE WELCOME";
+  txtout.style.color = "rgb(187, 225, 250)";
+  txtout.textContent = "YOU'RE WELCOME 🤗";
 }
 
 function errorHandler(error) {
@@ -34,12 +34,12 @@ function errorHandler(error) {
 
 sub.addEventListener("click", () => {
   let counter = txtinp.value.length;
-  txtout.style.fontWeight = "600";
+  txtout.style.content = "unset";
   try {
     if (counter > 2) {
       pass();
     } else {
-      throw new Error("INPUT SHOULD BE >= 3");
+      throw new Error("INPUT SHOULD BE >= 3 😭");
     }
   } catch (error) {
     errorHandler(error);
